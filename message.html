@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Message for You</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffe4f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #ff4da6;
+      font-size: 3rem;
+      margin-top: 50px;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .message {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      color: #555;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      animation: slideUp 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideUp {
+      from {transform: translateY(100px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    .hearts {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      color: #ff4da6;
+      font-size: 2rem;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 1; }
+      100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Love for You</h1>
+  <div class="message">
+    <p>
+      My dearest Pari,  
+      There are are no words ever created to describe how much you means
+      to me and changed me in the best waay possible. Kabhi bhi kisi cheez
+      ki khwahish na kerna, chhooti chhoti cheezon per itna khush hona and blessed 
+      feel kerna and apnai cute sai nakhrai and khwahishaat sirf mujh sai zahir kerna 
+      has made me fall harder for u every single day ,making me more and more thankful 
+      to making you my wife abhi sai.Aaap ye suchtien hain but trust me
+      Tumhari har chhoti chhoti baat ,gussa,nakhrai,restictions,you telling me your pain
+      eveyrthing doesnt tang me for mili sec ever ,it makes me feel the most blessed person ever.
+      The best moment i ever have and most happy i am when i remove your sadness and you just
+      let it go after sharing with ,this marks my biggest achievement. You are the only one jisnai
+      mera gusssa, mere nakhrai ,my mood swings,meri chhoti chhoti baaton per bbura manna expereince kia
+      but still you stood there beside me every single time ensuring i am releived.I know i could never 
+      convey my feelings fully to you ,but know by heart is only attached to u i dont just say but every
+      single minute thinking about u and our future and i am very happy and the most blessed
+      to have a caring ,rules oriented ,decent ,respectful,kind and har ksi ki to go person
+      as my wife and the mother of my children who will be best anyone could have In sha Allah.
+      Abhi what you do to my eyes will be conveyed to u face to face ,this is the least i could tell here
+      I LOVE MY WIFEEE HADH SAI BHI ZIADA AND MOST ANYONE COULD EVER DO
+      HAPPY BIRTHDAY MY LOVE! 💖
+      OPEN YOUR BAG
+    </p>
+  </div>
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
